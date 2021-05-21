@@ -18,8 +18,6 @@ export default {
     return axios.get("/api/books")
   },
 
-  loadHome: function () {
-    return axios.get("*", )
-  }
+
 
 }
