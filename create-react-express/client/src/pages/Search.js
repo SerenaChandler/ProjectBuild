@@ -8,13 +8,20 @@ import Footer from "../components/Footer"
 
 
 const Search = props => {
+
+
+    useEffect(() => {
+        getBook();
+    }, [])
+
+
     return(
         <div>
             <Nav/>
             <Hero/>
             <Searchbar/>
             <CardContainer>
-                {state.books.map(book) => (
+                {state.books.map(book => (
                     <Card 
                     key={book.title}
                     title={book.title}
@@ -24,16 +31,9 @@ const Search = props => {
                     link={book.link}
                     
                     />
-
-
-
-                )}
-
-
-
+                ))}
             </CardContainer>
-
-
+            <Footer/>
 
 
 
