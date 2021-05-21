@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
+import mongoose from "mongoose";
 const app = express();
 
 // Define middleware here
@@ -22,3 +23,12 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
+
+const CONNECTION_URL = "CONNECTION URL FOR MONGO CLUSTER GOES HERE";
+
+
+mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+.then( () => app.listen(PORT, ()=> console.log(`Server is running on port ${PORT}`)))
+.catch((error) => console.log(error.message));
+
+mongoose.set("useFindAndModify", false);
