@@ -1,12 +1,28 @@
-import React from "react";
-import CardContainer from "../components/CardContainer"
+import React, {useState} from "react";
+import API from "../../utils/API"
+
+
 function Card(props) {
+    const [bookState, setBookState] = useState({
+
+    })
+
+
+    const getBooks = () => {
+        API.getBook()
+          .then(results => {
+            setBookState(results);
+          })
+          .catch(err => console.log(err));
+      };
+
+
   return (
-                        <CardContainer>
+                       
                         <div className="card my-3">
                         <div className="d-flex justify-content-end mt-4">
                             <button className="btn btn-outline-primary d-inline mx-1"><a href={props.link}>View</a></button>
-                            <button className="btn btn-outline-primary d-inline mx-4" onClick={}>Save</button>
+                            <button className="btn btn-outline-primary d-inline mx-4" >Save</button>
                         </div>
                         <h1 className="mx-4">{props.title}</h1>
                         <h2 className="mx-4">{props.author}</h2>
@@ -18,7 +34,7 @@ function Card(props) {
                                 </p>
                         </div>
                     </div>
-                    </CardContainer>
+                   
   );
 }
 

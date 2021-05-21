@@ -1,12 +1,8 @@
 import React from "react";
-
-import "./App.css";
-import Card from "./components/Card/";
-import CardContainer from "./components/CardContainer/";
-import Nav from "./components/Nav"
-import Hero from "./components/Hero"
-import Searchbar from "./components/Searchbar"
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Saved from "./pages/Saved"
+import Search from "./pages/Search"
+import NoMatch from "./pages/NoMatch"
 
 function App() {
   return (
@@ -17,9 +13,6 @@ function App() {
           <Route exact path="/search" component={Search}/>
           <Route exact path="/saved" component={Saved}/>
           <Route component={NoMatch}/>
-
-
-
 
         </Switch>
     </div>
