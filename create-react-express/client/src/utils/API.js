@@ -19,7 +19,7 @@ export default {
   },
 
   loadHome: function () {
-    return axios.get("*")
+    return axios.get("*", )
   }
 
 }
