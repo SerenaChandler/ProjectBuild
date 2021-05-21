@@ -1,18 +1,29 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
+import React from "react";
+
 import "./App.css";
+import Card from "./components/Card/";
+import CardContainer from "./components/CardContainer/";
+import Nav from "./components/Nav"
+import Hero from "./components/Hero"
+import Searchbar from "./components/Searchbar"
+
 
 function App() {
   return (
-    <div className="App">
-      <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>Welcome to React</h2>
-      </div>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
+    <Router>
+    <div>
+        <Switch>
+          <Route exact path="/" component={Search}/>
+          <Route exact path="/search" component={Search}/>
+          <Route exact path="/saved" component={Saved}/>
+          <Route component={NoMatch}/>
+
+
+
+
+        </Switch>
     </div>
+    </Router>
   );
 }
 
