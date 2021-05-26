@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import Card from "../components/Card/";
 import BookList from '../components/BookList'; 
 import Nav from "../components/Nav"
 import Hero from "../components/Hero"
@@ -14,7 +13,6 @@ class Search extends Component {
       message       : ""
     }
   
-    // When the form is submitted, prevent its default behavior, and search the books API
     searchBooks = query => {
     
       if ( query ) { 

@@ -7,7 +7,7 @@ function CardContainer({children}) {
 
     <div className="container-fluid ">
 
-      <h1 className="text-center">Saved Books</h1>
+      <h1 className="text-center">Searched Books</h1>
       <div className="container-fluid">
         {children}
 
