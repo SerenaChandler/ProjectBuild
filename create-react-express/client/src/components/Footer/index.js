@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div>
 
-<footer class="text-center py-5"> Insert Footer Here</footer>
+<footer class="text-center py-5">made with react</footer>
 
     </div>
     
