@@ -11,9 +11,7 @@ import Footer from "../components/Footer"
 const Saved = props => {
 
 
-    useEffect(() => {
-        // getBook();
-    }, [])
+    
 
 
     return(

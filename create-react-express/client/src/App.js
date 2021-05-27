@@ -6,6 +6,9 @@ import Saved from "./pages/Saved"
 import Search from "./pages/Search"
 import NoMatch from "./pages/NoMatch"
 
+
+
+
 function App() {
   return (
     <div>
@@ -13,6 +16,7 @@ function App() {
    
         <Switch>
           <Route exact path="/" component={Search}/>
+          <Route exact path="/home" component={Search}/>
           <Route exact path="/search" component={Search}/>
           <Route exact path="/saved" component={Saved}/>
           <Route component={NoMatch}/>
