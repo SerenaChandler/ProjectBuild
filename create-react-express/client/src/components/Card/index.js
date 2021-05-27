@@ -7,11 +7,11 @@ function Card(props) {
   return (
     <div className="card my-3">
       <div className="d-flex justify-content-end mt-4">
-        <button className="btn btn-outline-primary d-inline mx-1">
-          <a href={link} target="_blank" rel="noreferrer">
+        <a className="text-decoration-none" href={link} target="_blank" rel="noreferrer">
+          <button className="btn btn-outline-primary d-inline mx-1">
             View
-          </a>
-        </button>
+          </button>{" "}
+        </a>
         <button className="btn btn-outline-primary d-inline mx-4">Save</button>
       </div>
       <h1 className="mx-4">{title}</h1>
