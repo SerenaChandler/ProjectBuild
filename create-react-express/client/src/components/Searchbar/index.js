@@ -1,11 +1,14 @@
+
 import React from "react";
 
 
 function Searchbar(props) {
   const { search, handleFormSubmit, handleInputChange } = props;
 
+
   return (
     <div className="row">
+
       <div className="col-lg-12">
         <div className="container">
           <h1>Book Search</h1>
@@ -34,7 +37,9 @@ function Searchbar(props) {
         </div>
       </div>
     </div>
+
   );
 }
+
 
 export default Searchbar;
