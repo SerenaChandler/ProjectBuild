@@ -18,7 +18,6 @@ const Search = (props) => {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-
     setSearch(value);
   };
 
@@ -30,6 +29,31 @@ const Search = (props) => {
       })
       .catch((err) => console.log(err));
   };
+
+  const handleSaveBook = (bookInfo) => {
+    const savedBook = [{
+      volumeInfo: {
+        infoLink: bookInfo.volumeInfo.infoLink,
+        title: bookInfo.volumeInfo.title,
+        authors: bookInfo.volumeInfo.authors[0],
+        imageLinks:{
+          thumbnail: bookInfo.volumeInfo.imageLinks.thumbnail
+        },
+        description: bookInfo.volumeInfo.description,
+      }
+    }]
+    console.log("Save book", savedBook);
+    API.saveBook(savedBook)
+      .then((response) => {
+        console.log(response)
+
+
+      });
+
+
+
+  }
+
 
   return (
     <div>
@@ -50,6 +74,7 @@ const Search = (props) => {
             author={book.volumeInfo.authors[0]}
             image={book.volumeInfo.imageLinks.thumbnail}
             description={book.volumeInfo.description}
+            handleSaveBook={() => handleSaveBook(book)}
           />
         ))}
       </CardContainer>

@@ -23,7 +23,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooksearch");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooksearch", {useNewUrlParser: true,  useUnifiedTopology: true});
 
 
 app.listen(PORT, () => {

@@ -1,18 +1,18 @@
 const router = require("express").Router();
-const bookController = require("../../controllers/bookController");
-const axios = require("axios");
+const bookController = require("../../controllers/bookControllers");
+//const axios = require("axios");
 
 
 router
   .route("/")
   .get(bookController.findAll)
-  .post(bookController.create);
+  .post(bookController.save);
 
 
 router
   .route("/:id")
-  .get(bookController.findById)
-  .put(bookController.update)
+  // .get(bookController.findAll)
+  // .put(bookController.update)
   .delete(bookController.remove);
 
 module.exports = router;
