@@ -10,6 +10,8 @@ import API from "../utils/API";
 
 
 const Saved = props => {
+
+
     const [savedBooks, setSavedBooks] = useState([]);
     useEffect(() => {
         API.getSavedBooks()
@@ -34,20 +36,17 @@ const Saved = props => {
             author={book.volumeInfo.authors[0]}
             image={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : "https://via.placeholder.com/350x150" }
             description={book.volumeInfo.description}
-            
+            // handleSaveBook={() => handleSaveBook(book)}
           />
         ))}
             </CardContainer>
             <Footer/>
 
-
-
-
         </div>
 
 
     );
-    // handleSaveBook={() => handleSaveBook(book)}
+    
 
 }
 
