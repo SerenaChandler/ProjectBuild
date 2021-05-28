@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import API from "../../utils/API";
 
 function Card(props) {
-  const { link, title, image, author, description } = props;
+  const { link, title, image, author, description, handleSaveBook } = props;
 
   return (
     <div className="card my-3">
@@ -12,7 +12,7 @@ function Card(props) {
             View
           </button>{" "}
         </a>
-        <button className="btn btn-outline-primary d-inline mx-4">Save</button>
+        <button className="btn btn-outline-primary d-inline mx-4" onClick={handleSaveBook} >Save</button>
       </div>
       <h1 className="mx-4">{title}</h1>
       <h2 className="mx-4">{author}</h2>
