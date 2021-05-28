@@ -10,7 +10,7 @@ This application allows you to search for books using a google API call, and sav
 
 React-Bootstrap
 
-## Site Previews
+
 
 ## Site Previews
 
